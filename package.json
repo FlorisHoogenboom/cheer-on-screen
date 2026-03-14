@@ -1,0 +1,13 @@
+{
+  "name": "cheer-on-screen",
+  "version": "1.0.0",
+  "description": "Display cheer messages on a big screen during a marathon",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "ws": "^8.18.0"
+  }
+}

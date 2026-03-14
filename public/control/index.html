@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheer Control</title>
+  <link rel="stylesheet" href="/control/style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="connection-banner" class="hidden">Disconnected — reconnecting...</div>
+
+    <h1>Cheer Control</h1>
+
+    <!-- Runner Name -->
+    <section>
+      <label for="runner-name">Runner Name</label>
+      <input type="text" id="runner-name" placeholder="e.g. Sarah" autocomplete="off">
+    </section>
+
+    <!-- Preset Messages -->
+    <section>
+      <label>Quick Cheers</label>
+      <div id="presets" class="button-grid">
+        <button class="preset-btn" data-template="Go [name]!">Go [name]!</button>
+        <button class="preset-btn" data-template="You got this [name]!">You got this!</button>
+        <button class="preset-btn" data-template="Almost there [name]!">Almost there!</button>
+        <button class="preset-btn" data-template="Keep going [name]!">Keep going!</button>
+      </div>
+    </section>
+
+    <!-- Custom Message -->
+    <section>
+      <label for="custom-msg">Custom Message</label>
+      <textarea id="custom-msg" rows="2" placeholder="Type your cheer..."></textarea>
+      <button id="send-custom" class="send-btn">Send</button>
+    </section>
+
+    <!-- Animation Selector -->
+    <section>
+      <label>Animation</label>
+      <div id="animations" class="button-grid">
+        <button class="anim-btn selected" data-anim="flash">Flash</button>
+        <button class="anim-btn" data-anim="marquee">Marquee</button>
+        <button class="anim-btn" data-anim="slide">Slide</button>
+        <button class="anim-btn" data-anim="zoom">Zoom</button>
+      </div>
+    </section>
+
+    <!-- Theme Selector -->
+    <section>
+      <label>Theme</label>
+      <div id="themes" class="button-grid"></div>
+    </section>
+
+    <!-- Toast -->
+    <div id="toast" class="hidden">Sent!</div>
+  </div>
+
+  <script src="/shared/themes.js"></script>
+  <script src="/control/script.js"></script>
+</body>
+</html>
